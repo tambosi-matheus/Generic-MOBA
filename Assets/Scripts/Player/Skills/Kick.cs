@@ -18,9 +18,10 @@ public class Kick : BaseSkill
         anim = obj.GetComponentInChildren<Animator>();
         PlayerController player = obj.GetComponent<PlayerController>();
         hitPosition = player.kickHitPosition;
-        feedbackPosition = player.KickFeedbackPosition;
+        feedbackPosition = player.kickFeedbackPosition;
         feedback = player.kickFeedback;
         hitbox = player.kickHitbox;
+        skillLayer = player.kickLayer;
 
     }
     public override void OnSkillPressed()
@@ -39,11 +40,14 @@ public class Kick : BaseSkill
 
         Collider[] coll = Physics.OverlapSphere(hitPosition.position, hitbox, skillLayer);
 
-        if(coll.Length > 0)
+        Debug.Log("Hit " + coll.Length + " enemies");
+        if (coll.Length > 0)
+        { 
+
             foreach (Collider enemy in coll)
-            {
-                Debug.Log("Hit " + coll.Length + " enemies");
+            {                
                 enemy.GetComponent<Dummy>().Hit();    
             }
+        }
     }
 }

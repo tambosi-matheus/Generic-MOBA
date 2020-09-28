@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask kickLayer;
     public Transform kickHitPosition;
     public GameObject kickFeedback;
-    public Transform KickFeedbackPosition;
+    public Transform kickFeedbackPosition;
     public float kickHitbox;
     
 
@@ -43,8 +43,9 @@ public class PlayerController : MonoBehaviour
         GetComponent<StateMachine>().SetStates(states);
     }
 
+
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(transform.position, 50);
+        Gizmos.DrawWireSphere(kickHitPosition.position, kickHitbox);
     }
 }

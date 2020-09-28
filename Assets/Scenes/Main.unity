@@ -7915,11 +7915,19 @@ PrefabInstance:
       objectReference: {fileID: 2058418154}
     - target: {fileID: 709059132, guid: 8bc0dc29c158cc04e9ea0fc3abef43b4, type: 3}
       propertyPath: kickHitbox
-      value: 5
+      value: 1.13
       objectReference: {fileID: 0}
+    - target: {fileID: 709059132, guid: 8bc0dc29c158cc04e9ea0fc3abef43b4, type: 3}
+      propertyPath: kickFeedbackPosition
+      value: 
+      objectReference: {fileID: 1431523946}
     - target: {fileID: 1169896624, guid: 8bc0dc29c158cc04e9ea0fc3abef43b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.099
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169896624, guid: 8bc0dc29c158cc04e9ea0fc3abef43b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 3156173844586506928, guid: 8bc0dc29c158cc04e9ea0fc3abef43b4,
         type: 3}
